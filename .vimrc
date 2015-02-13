@@ -1,3 +1,4 @@
+"call pathogen#infect()
 
 " An example for a vimrc file.
 "
@@ -95,3 +96,25 @@ if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 		  \ | wincmd p | diffthis
 endif
+
+" editing the tab key functions
+set tabstop=4
+set shiftwidth=4
+set smartindent
+set expandtab
+if has("autocmd")
+     " Enabled file type detection
+     " Enabled file language-dependent indenting
+     filetype plugin on
+     filetype indent on
+     endif " has ("autocmd")
+let b:verilog_indent_modules = 1
+
+" vim go install
+syntax enable
+filetype plugin on
+set number
+let g:go_disable_autoinstall=0
+let g:neocomplete#enable_at_startup=1
+" change colorscheme
+colorscheme molokai
