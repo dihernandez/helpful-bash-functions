@@ -53,7 +53,17 @@ createBootableUsb()
     rmMediaName=${rmMediaName:1:rmMediaLen}
     echo "rmMediaName is" $rmMediaName
     diskutil unmountDisk $rmMediaName
-    sudo dd if=$DIR/${imageName}.img.dmg of=$rmMediaName bs=1m
+    sudo dd if=./${imageName}.img.dmg of=$rmMediaName bs=1m
     echo 'Sucessfully copied file, ejecting now...'
     diskutil eject $rmMediaName
+}
+
+avrArduinoBuildBasic () {
+    inputFile=$1
+    fileNameLen=${#inputFile}-1
+    name=${inputFile:0:fileNameLen} 
+    avr-gcc -Os -DF_CPU=16000000UL -mmcu=atmega328p -c -o $name.o $inputFile
+    avr-gcc -mmcu=atmega328p $name.o -o $name
+    avr-objcopy -O ihex -R .eeprom $name $name.hex
+    avrdude -F -V -c arduino -p ATMEGA328P -P /dev/tty.usbmodem1411 -b 115200 -U flash:w:$name.hex
 }
