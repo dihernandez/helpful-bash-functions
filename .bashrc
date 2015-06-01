@@ -12,7 +12,7 @@ cCompile ()
     mystr=$1
     cliargs=$2
     mystrlen=${#mystr}-1
-    gcc "$1" -o ${mystr:0:mystrlen}"out" $cliargs
+    gcc "$1" -std=c99 -o ${mystr:0:mystrlen}"out" $cliargs
 }
 
 androidBuild()
@@ -60,10 +60,10 @@ createBootableUsb()
 
 avrArduinoBuildBasic () {
     inputFile=$1
-    fileNameLen=${#inputFile}-1
+    fileNameLen=${#inputFile}-2
     name=${inputFile:0:fileNameLen} 
-    avr-gcc -Os -DF_CPU=16000000UL -mmcu=atmega328p -c -o $name.o $inputFile
+    avr-gcc -Os -DF_CPU=16000000UL -mmcu=atmega328p -c -o ${name}.o ${name}.c 
     avr-gcc -mmcu=atmega328p $name.o -o $name
-    avr-objcopy -O ihex -R .eeprom $name $name.hex
+    avr-objcopy -O ihex -R .eeprom $name ${name}.hex
     avrdude -F -V -c arduino -p ATMEGA328P -P /dev/tty.usbmodem1411 -b 115200 -U flash:w:$name.hex
 }
