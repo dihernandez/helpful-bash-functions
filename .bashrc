@@ -69,14 +69,13 @@ avrArduinoBuildBasic () {
 }
 
 clearAllInFile () {
-    $files = inputFile=$1
-    for $file in $files
+    for file in $1
     do
 	rm $file
     done	
 }
 
 removeAllBackupFiles () {
-    $backup_files = 'ls -a | grep ".*~"'
-    clearAllInFile $backup_files
+    ls -a | grep ".*~" > to_delete.txt 
+    clearAllInFile to_delete.txt
 }
