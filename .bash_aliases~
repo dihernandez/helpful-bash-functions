@@ -10,7 +10,7 @@ alias reset_camera="sudo killall VDCAssistant"
 # Sublime Control
 alias subl="cd /Applications/Sublime\ Text.app/Contents/MacOS/ && ./Sublime\ Text"
 # never use nano
-alias nano="vi"
+alias nano="subl"
 #macvim
 alias mvim="/Applications/MacVim.app/Contents/MacOS/Vim"
 #eclipse
