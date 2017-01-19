@@ -65,5 +65,18 @@ avrArduinoBuildBasic () {
     avr-gcc -Os -DF_CPU=16000000UL -mmcu=atmega328p -c -o ${name}.o ${name}.c 
     avr-gcc -mmcu=atmega328p $name.o -o $name
     avr-objcopy -O ihex -R .eeprom $name ${name}.hex
-    avrdude -F -V -c arduino -p ATMEGA328P -P /dev/tty.usbmodem1411 -b 115200 -U flash:w:$name.hex
+    avrdude -F -D -V -c arduino -p ATMEGA328P -P /dev/tty.usbmodem1411 -b 115200 -U flash:w:$name.hex
+}
+
+clearAllInFile () {
+    $files = inputFile=$1
+    for $file in $files
+    do
+	rm $file
+    done	
+}
+
+removeAllBackupFiles () {
+    $backup_files = 'ls -a | grep ".*~"'
+    clearAllInFile $backup_files
 }
