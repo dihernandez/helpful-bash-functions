@@ -54,13 +54,29 @@ if [ -f /opt/moose/environments/moose_profile ]; then
         . /opt/moose/environments/moose_profile
 fi
 
+# Setting pinpath for use with zsim
+export PINPATH="/Users/diher/UROP/pin-3.2-81205-clang-mac/"
 
-##
-# Your previous /Users/dianah/.bash_profile file was backed up as /Users/dianah/.bash_profile.macports-saved_2015-01-04_at_17:16:11
-##
 # DISABLED MACPORTS FOR EXPERIMENTATION WITH HOMEBREW
 # MacPorts Installer addition on 2015-01-04_at_17:16:11: adding an appropriate PATH variable for use with MacPorts.
 #export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 #export PATH="/usr/local/bin:$PATH"
+
+# Setting PATH for Python 3.6
+# The original version is saved in .bash_profile.pysave
+PATH="/usr/local/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+export PATH
+
+# Ordspecsim environment variables:
+export PYTHONPATH=/data/sanchez/tools/pymodules/lib/python2.7/site-packages
+ZSIMDEPSROOT=/data/sanchez/benchmarks/zsim-deps
+export PINPATH=$ZSIMDEPSROOT/pin-2.14-71313-gcc.4.4.7-linux
+export PIN_HOME=$PINPATH
+export LIBCONFIGPATH=$ZSIMDEPSROOT/libconfig-1.4.9/inst/
+export POLARSSLPATH=$ZSIMDEPSROOT/polarssl-1.1.4/
+export DRAMSIMPATH=$ZSIMDEPSROOT/DRAMSim2/
+export ZSIMARMADILLOPATH=$ZSIMDEPSROOT/armadillo/
+export ZSIMAPPSPATH=/data/sanchez/benchmarks/zsim-apps/
+export PATH=$PATH:/usr/local/csail/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games:$PINPATH
