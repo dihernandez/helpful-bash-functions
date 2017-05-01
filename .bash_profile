@@ -42,7 +42,11 @@ fi
 
 
 # Add custom functions
-source "/Users/dianah/.bashrc"
+
+if [ -f ~/.bashrc ]; then
+        . ~/.bashrc
+fi
+
 # Uncomment to enable pretty prompt:
 export MOOSE_PROMPT=true
 
