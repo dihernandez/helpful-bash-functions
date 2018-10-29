@@ -84,3 +84,5 @@ export DRAMSIMPATH=$ZSIMDEPSROOT/DRAMSim2/
 export ZSIMARMADILLOPATH=$ZSIMDEPSROOT/armadillo/
 export ZSIMAPPSPATH=/data/sanchez/benchmarks/zsim-apps/
 export PATH=$PATH:/usr/local/csail/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games:$PINPATH
+# Added by install_latest_perl_osx.pl
+[ -r /Users/diher/.bashrc ] && source /Users/diher/.bashrc

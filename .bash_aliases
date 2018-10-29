@@ -1,5 +1,7 @@
-alias athena_login="ssh athena.dialup.mit.edu -X -l dianah13"
+alias athena_login="ssh dianah13@athena.dialup.mit.edu -X"
 alias csail_login="ssh diher@login.csail.mit.edu"
+alias madX_login="ssh diher@mad1.csail.mit.edu"
+alias z_login="ssh diher@z.csail.mit.edu"
 alias clang_32asm="clang -m32 -S"
 alias compile_analyzer="g++ -std=c++0x example.cpp -o compiled_analyzer"
 alias compile_picture_analyzer="g++ -o pictureAnalyzerMain.out pictureAnalyzerMain.cpp -O2 -lm -lpthread -I/usr/X11R6/include -L/usr/X11R6/lib -lm -lpthread"
@@ -12,9 +14,9 @@ alias reset_camera="sudo killall VDCAssistant"
 alias subl="/Applications/Sublime\ Text.app/Contents/MacOS/Sublime\ Text"
 # never use nano
 alias nano="vi"
-#macvim
-alias mvim="/Applications/MacVim.app/Contents/MacOS/Vim"
 #eclipse
 alias eclipse="cd /Applications/Eclipse.app/Contents/MacOS && ./eclipse -clean -data ~/git/ && cd ~/git/"
 alias old_home_dir="cd /Users/dianah/"
 alias gcc="/Developer/Developer/usr/bin/gcc"
+#MacVim
+alias mvim="/usr/local/Cellar/macvim/8.0-146_1/MacVim.app/Contents/MacOS/MacVim"
