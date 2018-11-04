@@ -20,3 +20,4 @@ alias old_home_dir="cd /Users/dianah/"
 alias gcc="/Developer/Developer/usr/bin/gcc"
 #MacVim
 alias mvim="/usr/local/Cellar/macvim/8.0-146_1/MacVim.app/Contents/MacOS/MacVim"
+alias python="python3"

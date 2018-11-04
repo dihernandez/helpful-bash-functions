@@ -14,11 +14,11 @@ export PATH=$PATH:/Users/dianah/Documents/adt-bundle-mac-x86_64-20140702/sdk/pla
 #export PATH=/usr/local/go/bin
 export GOPATH=$HOME/6.824 #usr/local/Cellar/go/
 # Setting path for gnuradio
-export PYTHONPATH=/usr/local/lib/python2.7/dist-packages
+export PYTHONPATH=/usr/local/lib/python3.6/dist-packages
 
 # Setting PATH for Python 2.7
 # The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 export PATH
 
 # added by Anaconda 1.9.1 installer
@@ -30,6 +30,9 @@ export PATH=$PATH:/usr/local/bin
 
 # Add gradle 
 export PATH=/usr/local/bin/gradle-3.3/bin:$PATH
+
+# python 3
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -70,8 +73,8 @@ export PINPATH="/Users/diher/UROP/pin-3.2-81205-clang-mac/"
 
 # Setting PATH for Python 3.6
 # The original version is saved in .bash_profile.pysave
-PATH="/usr/local/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
-export PATH
+# PATH="/usr/local/bin/python:${PATH}"
+# export PATH
 
 # Ordspecsim environment variables:
 export PYTHONPATH=/data/sanchez/tools/pymodules/lib/python2.7/site-packages
