@@ -24,6 +24,8 @@ export PATH
 # added by Anaconda 1.9.1 installer
 export PATH="/Users/dianah/anaconda/bin:$PATH"
 
+
+export PATH=/usr/bin:$PATH
 # avr dev tools
 export PATH=$PATH:/usr/local/bin
 ##
@@ -51,18 +53,18 @@ if [ -f ~/.bashrc ]; then
 fi
 
 # Uncomment to enable pretty prompt:
-export MOOSE_PROMPT=true
+#export MOOSE_PROMPT=true
 
 # Uncomment to enable autojump:
-export MOOSE_JUMP=true
+#export MOOSE_JUMP=true
 
 # Source MOOSE profile
-if [ -f /opt/moose/environments/moose_profile ]; then
-        . /opt/moose/environments/moose_profile
-fi
+#if [ -f /opt/moose/environments/moose_profile ]; then
+#        . /opt/moose/environments/moose_profile
+#fi
 
 # Setting pinpath for use with zsim
-export PINPATH="/Users/diher/UROP/pin-3.2-81205-clang-mac/"
+#export PINPATH="/Users/diher/UROP/pin-3.2-81205-clang-mac/"
 
 # DISABLED MACPORTS FOR EXPERIMENTATION WITH HOMEBREW
 # MacPorts Installer addition on 2015-01-04_at_17:16:11: adding an appropriate PATH variable for use with MacPorts.
@@ -89,3 +91,13 @@ export ZSIMAPPSPATH=/data/sanchez/benchmarks/zsim-apps/
 export PATH=$PATH:/usr/local/csail/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games:$PINPATH
 # Added by install_latest_perl_osx.pl
 [ -r /Users/diher/.bashrc ] && source /Users/diher/.bashrc
+
+# MacPorts Installer addition on 2018-11-08_at_12:55:36: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+
+# MacPorts Installer addition on 2018-11-08_at_12:55:36: adding an appropriate MANPATH variable for use with MacPorts.
+export MANPATH="/opt/local/share/man:$MANPATH"
+# Finished adapting your MANPATH environment variable for use with MacPorts.
+
