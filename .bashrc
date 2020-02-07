@@ -1,3 +1,8 @@
+vlsiLoggin() {
+    computer_chosen=$((1 + RANDOM % 4))
+    ssh dianah13@vlsifarm-0${computer_chosen}.mit.edu
+}
+
 cppCompile ()
 {
     mystr=$1
@@ -80,4 +85,3 @@ removeAllBackupFiles () {
     ls -a | grep ".*~" > to_delete.txt 
     clearAllInFile to_delete.txt
 }
-source /Users/diher/perl5/perlbrew/etc/bashrc
